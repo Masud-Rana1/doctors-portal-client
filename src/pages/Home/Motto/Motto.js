@@ -1,13 +1,13 @@
 import React from "react";
 import { Button, Container, Grid, Typography } from "@mui/material";
 import motto from "../../../images/treatment.png";
-
 const Motto = () => {
   return (
     <Container sx={{ marginTop: 5 }}>
       <Grid container spacing={2}>
-        <Grid item xs={12} md={6}>
-          <img src={motto} alt="" style={{ width: 400 }} />
+        <Grid item xs={12} md={6} sx={{width:"100%",
+  height: "auto"}}>
+          <img src={motto} alt=""  style={{width: 350}} />
         </Grid>
         <Grid item xs={12} md={6} sx={{ textAlign: "left" }}>
           <Typography variant="h4" sx={{ fontWeight: 600 }}>

@@ -34,8 +34,9 @@ const Banner = () => {
           <Button variant="contained" style={{backgroundColor: '#5CE7ED'}}>Get Appoitment</Button>
           </Box>
         </Grid>
-        <Grid item xs={12} md={6} style={verticalCenter}>
-          <img style={{width: "400px"}} src={chair} alt="" />
+        <Grid item xs={12} md={6} style={verticalCenter} sx={{width:"100%",
+  }} >
+          <img  style={{width: 350}} src={chair} alt="" />
         </Grid>
         
       </Grid>

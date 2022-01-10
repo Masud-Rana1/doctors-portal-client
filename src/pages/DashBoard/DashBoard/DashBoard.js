@@ -43,11 +43,13 @@ function DashBoard(props) {
     <div>
       <Toolbar />
       <Divider />
-      <Link style={{textDecoration: 'none', color: 'black'}}  to="/appointment"><Button color="inherit">Book an Appointment</Button></Link>
-      <Link style={{textDecoration: 'none', color: 'black'}}  to={`${url}`}><Button color="inherit">DashBoard</Button></Link>
+      <Link style={{textDecoration: 'none',textAlign:"left", color: 'black'}}  to="/home"><Button color="inherit">Home</Button></Link>
+      <br />
+      <Link style={{textDecoration: 'none',textAlign:"left", color: 'black'}}  to="/appointment"><Button color="inherit">Appointment</Button></Link>
+      <Link style={{textDecoration: 'none',textAlign:"left", color: 'black'}}  to={`${url}`}><Button color="inherit">DashBoard</Button></Link>
 {admin && <Box>
-  <Link style={{textDecoration: 'none', color: 'black'}}  to={`${url}/makeAdmin`}><Button color="inherit">Make Admin</Button></Link>
-      <Link style={{textDecoration: 'none', color: 'black'}}  to={`${url}/addDoctor`}><Button color="inherit">Add Doctor</Button></Link>
+  <Link style={{textDecoration: 'none',textAlign:"left", color: 'black'}}  to={`${url}/makeAdmin`}><Button color="inherit">Make Admin</Button></Link>
+      <Link style={{textDecoration: 'none',textAlign:"left", color: 'black'}}  to={`${url}/addDoctor`}><Button color="inherit">Add Doctor</Button></Link>
   </Box>}
 
       <List>
@@ -65,7 +67,7 @@ function DashBoard(props) {
 
   const container =
     window !== undefined ? () => window().document.body : undefined;
-
+    const{user} = useAuth();
   return (
     <Box sx={{ display: "flex" }}>
       <CssBaseline />
@@ -85,9 +87,9 @@ function DashBoard(props) {
             sx={{ mr: 2, display: { sm: "none" } }}
           >
             <MenuIcon />
-          </IconButton>
+          </IconButton>     
           <Typography variant="h6" noWrap component="div">
-            DashBoard
+            {user.displayName}`s DashBoard
           </Typography>
         </Toolbar>
       </AppBar>

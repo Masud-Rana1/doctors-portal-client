@@ -6,13 +6,13 @@ const DashBoardHome = () => {
     const [date, setDate] = useState(new Date());
     return (
             <Grid container spacing={2}>
-          <Grid item xs={8} sm={5}>
+          <Grid item xs={12} sm={5}>
             <Calendar
             date={date}
             setDate={setDate}
             ></Calendar>
           </Grid>
-          <Grid item xs={4} sm={7}>
+          <Grid item xs={12} sm={7}>
             <Appointments
             date={date}
             ></Appointments>
